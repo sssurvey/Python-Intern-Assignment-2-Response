@@ -87,6 +87,7 @@ def solution_without_client(): #for this function, without the python intercom m
         data = {'id': element[0],
                 'name': element[1], 'email': element[2]}
         requests.post(users_url, data=data, auth=HTTPBasicAuth(api_id, api_key))
+    return True
     
 def main():
     solution_by_client() # with python intercom module
