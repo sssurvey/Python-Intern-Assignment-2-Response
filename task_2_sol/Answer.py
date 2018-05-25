@@ -53,7 +53,7 @@ def solution_by_client(): # for this function, using the python intercom module
     # for access token, reference: https://developers.intercom.com/docs/personal-access-tokens
 
     # 6. looping through the list based on the Monument labs "user" table
-    # e.g: owarray_list[1][0] = id, rowarray_list[1][1] = name, rowarray_list[1][2] = email
+    # e.g: rowarray_list[1][0] = id, rowarray_list[1][1] = name, rowarray_list[1][2] = email
     for element in rowarray_list:
         intercom.users.create(id = element[0], name = element[1], email = element[2])
     # since table already specify not NULL, I dont need to worry about null value
